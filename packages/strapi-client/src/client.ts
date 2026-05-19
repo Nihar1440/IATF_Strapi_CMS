@@ -53,10 +53,16 @@ async function apiFetch<T>(
     }
 
     if (!res.ok) {
-      throw new Error(`Strapi API error: ${res.status} ${res.statusText} — ${url.pathname}`)
+      const errorText = await res.text().catch(() => '')
+      throw new Error(`Strapi API error: ${res.status} ${res.statusText} — ${url.pathname}. Body snippet: ${errorText.slice(0, 200)}`)
     }
 
-    return res.json() as Promise<T>
+    const text = await res.text()
+    try {
+      return JSON.parse(text) as T
+    } catch (err: any) {
+      throw new Error(`Failed to parse JSON response from ${url.toString()}. Status: ${res.status}. Error: ${err.message}. Body snippet: ${text.slice(0, 250)}`)
+    }
   } finally {
     clearTimeout(timer)
   }
