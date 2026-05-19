@@ -1,0 +1,82 @@
+# ──────────────────────────────────────────────────────────
+# robots.txt — IATF Solutions Landing Page
+# https://iatf-solutions.com
+# ──────────────────────────────────────────────────────────
+
+# Allow all well-behaved crawlers access to public pages
+User-agent: *
+Allow: /
+Allow: /en/
+Allow: /de/
+
+# Block internal / utility paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /404
+Disallow: /500
+Disallow: /error
+
+# Keep crawl budget focused: only canonical locale prefixes
+# (redirect / -> /en/ is handled by Next.js middleware)
+Disallow: /en/404
+Disallow: /de/404
+
+# ── Google ──────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Allow: /en/
+Allow: /de/
+Disallow: /api/
+Disallow: /_next/
+Crawl-delay: 0
+
+# ── Google Images ────────────────────────────────────────
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /api/
+
+# ── Bing ─────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Allow: /en/
+Allow: /de/
+Disallow: /api/
+Disallow: /_next/
+Crawl-delay: 5
+
+# ── Yandex ───────────────────────────────────────────────
+User-agent: YandexBot
+Allow: /
+Allow: /en/
+Allow: /de/
+Disallow: /api/
+Disallow: /_next/
+Crawl-delay: 5
+
+# ── AI / scraper bots — block all ───────────────────────
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# ── Sitemap location ─────────────────────────────────────
+Sitemap: https://iatf-solutions.com/sitemap.xml
