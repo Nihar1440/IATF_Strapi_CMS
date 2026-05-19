@@ -3,7 +3,7 @@ import { csrInfoSeedDataEn, csrInfoSeedDataDe, eightdInfoSeedDataEn, eightdInfoS
 import { oemSeedData, processSeedData } from '../seeds/others';
 
 export async function runSeeding(strapi: any) {
-  const forceSeed = process.env.FORCE_SEED === 'true';
+  const forceSeed = true; // process.env.FORCE_SEED === 'true';
 
   strapi.log.info('Checking if database needs seeding...');
 
