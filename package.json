@@ -22,7 +22,11 @@
     "build:landing": "turbo build --filter=@iatf/landing",
     "build:eightd": "turbo build --filter=@iatf/eightd",
     "build:csr": "turbo build --filter=@iatf/csr",
-    "build:fmea": "turbo build --filter=@iatf/fmea"
+    "build:fmea": "turbo build --filter=@iatf/fmea",
+    "start:landing": "npm run start --workspace=@iatf/landing",
+    "start:eightd": "npm run start --workspace=@iatf/eightd",
+    "start:csr": "npm run start --workspace=@iatf/csr",
+    "start:fmea": "npm run start --workspace=@iatf/fmea"
   },
   "devDependencies": {
     "turbo": "^2.5.3"
