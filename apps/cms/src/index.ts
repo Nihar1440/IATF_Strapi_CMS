@@ -17,31 +17,36 @@ export default {
    * run jobs, or perform some special logic.
    */
   async bootstrap({ strapi }: { strapi: any }) {
+    // ── Configure Locales First ──────────────────────────────────────────────
+    try {
+      const localeQuery = strapi.db.query('plugin::i18n.locale')
+      const locales = await localeQuery.findMany()
+      const hasEnglishLocale = locales.some((locale: { code?: string }) => locale.code === 'en')
+      const hasGermanLocale = locales.some((locale: { code?: string }) => locale.code === 'de')
+
+      if (!hasEnglishLocale) {
+        await localeQuery.create({
+          data: {
+            name: 'English (en)',
+            code: 'en',
+          },
+        })
+      }
+
+      if (!hasGermanLocale) {
+        await localeQuery.create({
+          data: {
+            name: 'German (de)',
+            code: 'de',
+          },
+        })
+      }
+    } catch (error) {
+      strapi.log.error('Failed to configure locales:', error)
+    }
+
     // ── Run Seeding Logic ────────────────────────────────────────────────────
     await runSeeding(strapi);
-
-    const localeQuery = strapi.db.query('plugin::i18n.locale')
-    const locales = await localeQuery.findMany()
-    const hasEnglishLocale = locales.some((locale: { code?: string }) => locale.code === 'en')
-    const hasGermanLocale = locales.some((locale: { code?: string }) => locale.code === 'de')
-
-    if (!hasEnglishLocale) {
-      await localeQuery.create({
-        data: {
-          name: 'English (en)',
-          code: 'en',
-        },
-      })
-    }
-
-    if (!hasGermanLocale) {
-      await localeQuery.create({
-        data: {
-          name: 'German (de)',
-          code: 'de',
-        },
-      })
-    }
 
 
     // ── Configure Public Permissions ─────────────────────────────────────────
