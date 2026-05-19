@@ -92,13 +92,13 @@ export default function CsrInfoPage({ content }: { content: InfoPage }) {
         <h1
           className="mb-5 text-3xl font-bold leading-tight tracking-tight text-neutral-900 sm:text-5xl"
         >
-          {content.heroTitle}{' '}
+          {content.heroTitle || t('heroTitle')}{' '}
           <span className="italic" style={{ color: '#2563eb' }}>
-            {content.heroTitleHighlight}
+            {content.heroTitleHighlight || t('heroTitleAccent')}
           </span>
         </h1>
         <p className="mx-auto mb-10 max-w-[620px] text-base leading-relaxed text-neutral-600 sm:text-lg">
-          {content.heroDescription}
+          {content.heroDescription || t('heroDesc')}
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button render={<a href={`/${locale}/unlock`} className="flex items-center justify-center gap-2" />} size="lg" className="rounded-full bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-600/20 text-sm font-semibold h-12 w-full sm:w-52">
