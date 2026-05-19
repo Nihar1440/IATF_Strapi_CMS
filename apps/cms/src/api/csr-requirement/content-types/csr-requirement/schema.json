@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "csr_requirements",
+  "info": {
+    "singularName": "csr-requirement",
+    "pluralName": "csr-requirements",
+    "displayName": "CSR Requirement",
+    "description": "IATF 16949 base requirements and OEM customer-specific requirements"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "requirementId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "iatfChapter": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "oemId": {
+      "type": "enumeration",
+      "enum": ["BMW", "VW", "MERCEDES", "STELLANTIS", "FORD", "GM", "RENAULT", "TOYOTA", "HYUNDAI_KIA", "VOLVO"]
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "version": {
+      "type": "string",
+      "default": "IATF 16949:2016"
+    },
+    "changeStatus": {
+      "type": "enumeration",
+      "enum": ["new", "updated", "unchanged", "deleted"],
+      "default": "unchanged"
+    },
+    "risk": {
+      "type": "enumeration",
+      "enum": ["low", "medium", "high", "critical"],
+      "default": "medium"
+    },
+    "severity": {
+      "type": "enumeration",
+      "enum": ["supplementary", "tightening", "replacing"]
+    },
+    "sourceDoc": {
+      "type": "string"
+    },
+    "conflictFlag": {
+      "type": "boolean",
+      "default": false
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "lastUpdated": {
+      "type": "date"
+    },
+    "overIatfFlag": {
+      "type": "boolean",
+      "default": false
+    },
+    "tags": {
+      "type": "json"
+    }
+  }
+}

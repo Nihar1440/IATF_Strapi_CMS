@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pricing_tiers",
+  "info": {
+    "singularName": "pricing-tier",
+    "pluralName": "pricing-tiers",
+    "displayName": "Pricing Tier",
+    "description": "Pricing plans for 8D Generator and CSR Matrix tools"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": { "localized": true }
+  },
+  "attributes": {
+    "toolId": {
+      "type": "enumeration",
+      "enum": ["tool_8d", "tool_csr"],
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "currency": {
+      "type": "string",
+      "default": "EUR",
+      "required": true
+    },
+    "credits": {
+      "type": "integer",
+      "required": true
+    },
+    "stripePriceId": {
+      "type": "string"
+    },
+    "highlighted": {
+      "type": "boolean",
+      "default": false
+    },
+    "badgeLabel": {
+      "type": "string",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "features": {
+      "type": "json"
+    },
+    "sortOrder": {
+      "type": "integer",
+      "default": 0
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

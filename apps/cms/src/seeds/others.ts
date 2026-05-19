@@ -1,0 +1,32 @@
+export const oemSeedData = [
+  { oemId: 'BMW', name: 'BMW Group', logo: 'bmw.svg', lastUpdate: '2025-09-01', csrCount: 42, active: true },
+  { oemId: 'VW', name: 'Volkswagen Group (VW, Audi, Porsche, SEAT, Škoda)', logo: 'vw.svg', lastUpdate: '2025-08-15', csrCount: 56, active: true },
+  { oemId: 'MERCEDES', name: 'Mercedes-Benz Group', logo: 'mercedes.svg', lastUpdate: '2025-07-20', csrCount: 38, active: true },
+  { oemId: 'STELLANTIS', name: 'Stellantis (FCA, PSA, Opel)', logo: 'stellantis.svg', lastUpdate: '2025-06-10', csrCount: 45, active: true },
+  { oemId: 'FORD', name: 'Ford Motor Company', logo: 'ford.svg', lastUpdate: '2025-05-22', csrCount: 36, active: true },
+  { oemId: 'GM', name: 'General Motors', logo: 'gm.svg', lastUpdate: '2025-04-30', csrCount: 40, active: true },
+  { oemId: 'RENAULT', name: 'Renault Group (Renault, Dacia, Alpine)', logo: 'renault.svg', lastUpdate: '2025-07-01', csrCount: 34, active: true },
+  { oemId: 'TOYOTA', name: 'Toyota Motor Corporation', logo: 'toyota.svg', lastUpdate: '2025-03-15', csrCount: 30, active: true },
+  { oemId: 'HYUNDAI_KIA', name: 'Hyundai / Kia', logo: 'hyundai_kia.svg', lastUpdate: '2025-06-25', csrCount: 28, active: true },
+  { oemId: 'VOLVO', name: 'Volvo Cars', logo: 'volvo.svg', lastUpdate: '2025-05-10', csrCount: 26, active: true },
+];
+
+export const processSeedData = [
+  { processId: 'P-COP-01', name: 'Sales & Order Management', category: 'COP', sortOrder: 1 },
+  { processId: 'P-COP-02', name: 'Product & Process Development (APQP)', category: 'COP', sortOrder: 2 },
+  { processId: 'P-COP-03', name: 'Purchasing & Supplier Management', category: 'COP', sortOrder: 3 },
+  { processId: 'P-COP-04', name: 'Production Planning & Scheduling', category: 'COP', sortOrder: 4 },
+  { processId: 'P-COP-05', name: 'Production / Manufacturing', category: 'COP', sortOrder: 5 },
+  { processId: 'P-COP-06', name: 'Warehouse & Logistics', category: 'COP', sortOrder: 6 },
+  { processId: 'P-COP-07', name: 'Customer Service & After-Sales', category: 'COP', sortOrder: 7 },
+  { processId: 'P-SUP-01', name: 'Quality Management', category: 'SUP', sortOrder: 8 },
+  { processId: 'P-SUP-02', name: 'Document & Record Control', category: 'SUP', sortOrder: 9 },
+  { processId: 'P-SUP-03', name: 'Human Resources & Training', category: 'SUP', sortOrder: 10 },
+  { processId: 'P-SUP-04', name: 'Maintenance & Equipment Management', category: 'SUP', sortOrder: 11 },
+  { processId: 'P-SUP-05', name: 'Measurement & Testing', category: 'SUP', sortOrder: 12 },
+  { processId: 'P-SUP-06', name: 'Internal Audit', category: 'SUP', sortOrder: 13 },
+  { processId: 'P-SUP-07', name: 'Corrective & Preventive Actions', category: 'SUP', sortOrder: 14 },
+  { processId: 'P-SUP-08', name: 'Management Review', category: 'SUP', sortOrder: 15 },
+  { processId: 'P-SUP-09', name: 'IT & Infrastructure', category: 'SUP', sortOrder: 16 },
+  { processId: 'P-SUP-10', name: 'Environmental, Health & Safety', category: 'SUP', sortOrder: 17 },
+];

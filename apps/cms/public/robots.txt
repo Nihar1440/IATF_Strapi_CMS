@@ -1,0 +1,7 @@
+# ──────────────────────────────────────────────────────────
+# robots.txt — IATF Solutions CMS (Strapi Admin)
+# This is a private headless CMS — block all crawlers.
+# ──────────────────────────────────────────────────────────
+
+User-agent: *
+Disallow: /

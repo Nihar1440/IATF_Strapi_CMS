@@ -1,0 +1,66 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "globalEnv": [
+    "NODE_ENV"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": [
+        "NEXT_PUBLIC_STRIPE_PRICE_8D_SINGLE",
+        "NEXT_PUBLIC_STRIPE_PRICE_8D_FIVE",
+        "NEXT_PUBLIC_STRIPE_PRICE_CSR_SINGLE",
+        "NEXT_PUBLIC_STRIPE_PRICE_CSR_FIVE",
+        "NEXT_PUBLIC_STRIPE_PRICE_CSR_TWENTY",
+        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY",
+        "NEXT_PUBLIC_TOOL_URL",
+        "NEXT_PUBLIC_BASE_URL",
+        "STRIPE_SECRET_KEY",
+        "STRIPE_WEBHOOK_SECRET",
+        "STRIPE_API_VERSION",
+        "KV_REST_API_URL",
+        "KV_REST_API_TOKEN",
+        "UPSTASH_REDIS_REST_URL",
+        "UPSTASH_REDIS_REST_TOKEN",
+        "SESSION_SECRET",
+        "SESSION_TTL_SECONDS",
+        "CODE_HASH_PEPPER",
+        "RESEND_API_KEY",
+        "ADMIN_EMAIL",
+        "CREDIT_DELIVERY_EMAIL_FROM",
+        "BASE_URL",
+        "AI_PROVIDER",
+        "ANTHROPIC_API_KEY",
+        "ANTHROPIC_MODEL",
+        "OPENAI_API_KEY",
+        "OPENAI_MODEL",
+        "GEMINI_API_KEY",
+        "GEMINI_MODEL",
+        "BILLING_ADMIN_TOKEN",
+        "BILLING_SUCCESS_URL",
+        "BILLING_CANCEL_URL",
+        "NEXT_PUBLIC_STRAPI_URL",
+        "STRAPI_API_TOKEN",
+        "STRAPI_URL",
+        "NEXT_PUBLIC_LANDING_PAGE_URL",
+        "NEXT_PUBLIC_COOKIEBOT_ID",
+        "NEXT_PUBLIC_TOOL_8D_URL",
+        "NEXT_PUBLIC_TOOL_CSR_URL",
+        "NEXT_PUBLIC_TOOL_FMEA_URL"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "type-check": {
+      "dependsOn": ["^type-check"]
+    }
+  }
+}

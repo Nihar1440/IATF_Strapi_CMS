@@ -1,0 +1,34 @@
+{
+  "name": "iatf-monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "npm@11.12.1",
+  "workspaces": [
+    "apps/csr",
+    "apps/eightd",
+    "apps/fmea",
+    "apps/landing",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "dev:landing": "turbo dev --filter=@iatf/landing",
+    "dev:eightd": "turbo dev --filter=@iatf/eightd",
+    "dev:csr": "turbo dev --filter=@iatf/csr",
+    "dev:fmea": "turbo dev --filter=@iatf/fmea",
+    "dev:cms": "npm run dev --prefix apps/cms",
+    "build:landing": "turbo build --filter=@iatf/landing",
+    "build:eightd": "turbo build --filter=@iatf/eightd",
+    "build:csr": "turbo build --filter=@iatf/csr",
+    "build:fmea": "turbo build --filter=@iatf/fmea"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.3"
+  },
+  "dependencies": {
+    "ajv": "^8.18.0",
+    "date-fns": "^2.30.0"
+  }
+}

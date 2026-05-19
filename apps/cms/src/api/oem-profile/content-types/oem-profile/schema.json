@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oem_profiles",
+  "info": {
+    "singularName": "oem-profile",
+    "pluralName": "oem-profiles",
+    "displayName": "OEM Profile",
+    "description": "Automotive OEM manufacturers and their CSR metadata"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "oemId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "type": "string"
+    },
+    "lastUpdate": {
+      "type": "date"
+    },
+    "csrCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}
