@@ -1,0 +1,13 @@
+# Monorepo Global Docker Ignore
+**/node_modules
+**/.cache
+**/.tmp
+**/.strapi
+**/build
+**/dist
+.git
+.github
+apps/cms/build
+apps/cms/.cache
+apps/cms/.tmp
+apps/cms/.strapi
