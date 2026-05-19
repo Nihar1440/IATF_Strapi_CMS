@@ -48,9 +48,6 @@
         }
       }
     },
-    "heroTitleHighlightColor": {
-      "type": "string"
-    },
     "heroDescription": {
       "type": "text",
       "pluginOptions": {

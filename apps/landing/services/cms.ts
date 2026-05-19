@@ -9,7 +9,6 @@ const cmsLandingPageFlatSchema = z.object({
 
   heroTitle: z.string().optional().nullable(),
   heroTitleHighlight: z.string().optional().nullable(),
-  heroTitleHighlightColor: z.string().optional().nullable(),
   heroSubtitle: z.string().optional().nullable(),
   heroPrimaryLabel: z.string().optional().nullable(),
   heroPrimaryHref: z.string().optional().nullable(),
@@ -471,7 +470,7 @@ export async function getLandingPageContent({
       hero: {
         title: inc.heroTitle || fallbackContent.hero.title,
         highlight: inc.heroTitleHighlight || '',
-        highlightColor: inc.heroTitleHighlightColor || '',
+        highlightColor: '#2563eb',
         subtitle: inc.heroSubtitle || fallbackContent.hero.subtitle,
         primaryButton: {
           label: inc.heroPrimaryLabel || fallbackContent.hero.primaryButton.label,

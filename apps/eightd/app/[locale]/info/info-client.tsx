@@ -87,7 +87,7 @@ export default function EightDInfoPage({ content }: { content: InfoPage }) {
           className="mb-5 text-3xl font-bold leading-tight tracking-tight text-neutral-900 sm:text-5xl"
         >
           {content.heroTitle}{' '}
-          <span className="italic" style={{ color: content.heroTitleHighlightColor || '#2563eb' }}>
+          <span className="italic" style={{ color: '#2563eb' }}>
             {content.heroTitleHighlight}
           </span>
         </h1>

@@ -20,7 +20,6 @@
     "backToHome": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
     "heroTitle": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
     "heroTitleHighlight": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
-    "heroTitleHighlightColor": { "type": "string" },
     "heroDescription": { "type": "text", "pluginOptions": { "i18n": { "localized": true } } },
     "ctaCredits": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
     "ctaBuy": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },

@@ -118,7 +118,6 @@ export interface InfoPage {
   backToHome?: string;
   heroTitle?: string;
   heroTitleHighlight?: string;
-  heroTitleHighlightColor?: string;
   heroDescription?: string;
   ctaCredits?: string;
   ctaBuy?: string;
