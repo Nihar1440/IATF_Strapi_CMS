@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cd ../.. && npx turbo build --filter=@iatf/eightd",
+  "outputDirectory": ".next",
+  "installCommand": "cd ../.. && npm install"
+}
