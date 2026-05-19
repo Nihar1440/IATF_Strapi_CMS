@@ -269,18 +269,6 @@ export function getLandingPageFallbackContent(
           imageAlt: t('tools.fmeaTitle'),
           cta: { label: `Open ${t('tools.fmeaTitle')}`, href: `${toolFmeaUrl}/${locale}/info`, variant: 'primary' },
         },
-        {
-          title: t('tools.fmeaTitle'),
-          description: t('tools.fmeaDesc'),
-          imageUrl:
-            'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800',
-          imageAlt: t('tools.fmeaTitle'),
-          cta: {
-            label: `Open ${t('tools.fmeaTitle')}`,
-            href: `${toolFmeaUrl}/${locale}/info`,
-            variant: 'primary',
-          },
-        },
       ],
       steps: [
         { number: '1', label: t('tools.step1') },
